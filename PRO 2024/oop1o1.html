@@ -1,0 +1,272 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="addBtn()">Add</button>
+        <button onclick="delBtn()">Delete</button>
+        <script>
+            const emptyObject = {}
+
+                function addBtn() {
+                    emptyObject.new = 10,
+                    console.log(emptyObject);
+                }
+                function delBtn() {
+                    delete emptyobject.new;
+                    console.log(emptyObject);
+                }
+        </script>
+    </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="incBtn">Increase</button>
+    <button id="decBtn">Decrease</button>
+    <script>
+        const value = {
+            startValue: 0,
+            
+            increment: function () {
+                this.startValue++;
+                console.log(this.startValue);
+            },
+            decrement: function () {
+                this.startValue--;
+                console.log(this.startValue);
+            },
+        };
+        document.getElementById("incBtn").onclick = function () {
+            value.increment();
+        };
+        document.getElementById("decBtn").onclick = function () {
+            value.decrement();
+        };
+
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="num1btn">Number 1</button>
+    <button id="num2btn">Number 2</button>
+    <button id="newName">New Property Name</button>
+    <script>
+        const task = {
+            numBer1: 1,
+            numBer2: 1,
+
+            printSum: function () {
+                console.log(this.numBer1 + this.numBer2);
+            },
+            multiSum: function () {
+                console.log(this.numBer1 * this.numBer2);
+            },
+            updateNumbers: function () {
+                this.numBer1 = parseFloat(prompt("Enter a new number:", this.numBer1));   // Should have been 2 methods as this one asks for both numbers at the same time. updatenumbers1 and updatenumbers 2, split.
+                this.numBer2 = parseFloat(prompt("Enter a new number:", this.numBer2));
+            },
+            newPropName: function () {
+                const propertyName = prompt("Enter the propertyname (numBer1 or numBer2)");
+                
+                if (this.hasOwnProperty(propertyName)) {
+                    const newValue = parseFloat(prompt(`Enter a new value for ${propertyName}:`, this[propertyName]));
+                    this[propertyName] = newValue;
+                    console.log(`${propertyName} has been updated to ${newValue}`);
+                }
+                else {
+                    console.log(`${propertyName} is not a valid property of this object`);
+                    alert(`${propertyName} is not a valid property of this object`);
+                };
+            },
+        };
+        task.printSum();
+        task.multiSum();
+
+        document.getElementById("num1btn").addEventListener("click", function() {
+            task.updateNumbers();
+            task.printSum();
+        });
+        
+        document.getElementById("num2btn").addEventListener("click", function() {
+            task.updateNumbers();
+            task.multiSum();
+        });
+
+        document.getElementById("newName").addEventListener("click", function() {
+            task.newPropName();
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="xml2json.js"></script>
+    <script src="json2xml.js"></script>
+    <script src="obj_json.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+
+</head>
+<body>
+    <script>
+        // const obj = {
+        //     value1: 1,
+        //     value2: 2,
+        //     sum: function () {
+        //         console.log(this.value1 + this.value2);
+        //     },
+        //     multiplication: function() {
+        //         console.log(this.value1 * this.value2);
+        //     },
+        // }
+
+        // class calculator {
+        //     constructor(
+        //         value1,
+        //         value2
+        //     ) {
+        //         this.value1 = value1;
+        //         this.value2 = value2;
+
+        //     }
+        //     sum() {
+        //         console.log(this.value1 + this.value2);
+        //     }
+        //     multiplication() {
+        //         console.log(this.value1 * this.value2);
+        //     }
+
+        // };
+
+        // function MyFunction (
+        //     name,
+        //     numberName,
+        //     smallName1,
+        //     smallName2,
+        //     status
+        // ) {
+        //     this.name = name; 
+        //     this.numberName = numberName;
+        //     this.smallObject = {
+        //         smallName1: smallName1,
+        //         smallName2: smallName2
+        //     }
+        //     this.myStatus = status;
+        //     this.myFunc = function(statusValue) {
+        //         this.myStatus = statusValue;
+        //     }
+        // }
+
+        // function Calculator (value1, value2) {                  // function class (values)
+        //     this.value1 = value1;
+        //     this.value2 = value2;
+            
+        //     this.sum = function () {
+        //         console.log(this.value1 + this.value2);
+        //     }
+        //     this.multiplication = function () {
+        //         console.log(this.value1 * this.value2);
+        //     }
+        // }
+
+    //     class wowExpansions {
+    //         constructor (expansionName, rating, dateReleased) {
+    //         this.expansionName = expansionName;
+    //         this.rating = rating;
+    //         this.dateReleased = new Date(dateReleased);
+    //     }
+    //     description() {
+    //         console.log(`${this.expansionName} has a rating of ${this.rating} and was released ${this.dateReleased}`)
+    //     }
+    //     yearsSinceRelease(){
+    //         const currentDate = new Date();
+    //         const years = currentDate.getFullYear() - this.dateReleased.getFullYear();
+    //         const months = currentDate.getMonth() - this.dateReleased.getMonth();
+    //         const days = currentDate.getDate() - this.dateReleased.getDate();
+
+    //         if (months < 0 || (months === 0 && days < 0)) {
+    //             return years -1;
+    //         }
+    //         return years;
+    //     }
+    // }
+
+    //     const expansionDate = new Date(2007, 0, 16)
+    //     const classicWow = new wowExpansions("The Burning Crusade", "5/5", expansionDate);
+
+    // console.log(`It has been ${classicWow.yearsSinceRelease()} years since ${classicWow.expansionName} was released`)
+
+    // In this lesson, we learned about more complex object details. In this task, you need to design two object templates for the following Object:
+
+    // const dog = {
+    //             name: "Rex",
+    //             age: 5,
+    //             bark: function () {
+    //                 console.log("Bark bark!")
+    //             },
+    //         };
+
+    // Using the Class and Object constructor, create a new method birth() which returns the year of the dog’s birth.
+
+
+
+    //     class dogInfo {
+    //         constructor (name, age ) {
+    //             this.name = name;
+    //             this.age = age;
+
+    //         }
+    //         bark() {
+    //             console.log("Bark bark!");
+    //         }
+    //         birth() {
+    //             const currentDate = new Date(); 
+    //             const years = currentDate.getFullYear() - this.age;
+    //             return years; 
+    //         }
+    //     };
+
+    //     const myDog = new DogInfo("Ola", 7);
+
+    //     console.log(`My dog was born in ${myDog.birth()}`)
+    
+    //     function DogInfo (name, age) {
+    //         this.name = name; 
+    //         this.age = age;
+        
+    //     this.bark = function() {
+    //         console.log("Bark bark!");
+    //     };
+    //     this.years = function() {
+    //         const currentDate = new Date(); 
+    //         const years = currentDate.getFullYear() - this.age;
+    //         return years;  
+    //     };
+    // }
+
+    //     const myDog = new DogInfo ("Ola", 7);
+
+    //     console.log(myDog.years());
+
+        </script>
+</body>
+</html>

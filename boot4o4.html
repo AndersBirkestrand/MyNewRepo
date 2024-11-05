@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.6.0.js"></script>
+        <script src="api.js"></script>
+        <link href="C:\Bootstrap\css\bootstrap.min.css" rel="stylesheet">
+        <title>Module 4.2 Assignment</title>
+    </head>
+    <body>
+        <h1 class="display-2">My heading</h1>
+        <div class="container">
+            <table class="table table-hover">
+                <tr class="table-success">
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr class="table-primary">
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                </table>
+        </div>
+        <div class="container align-items-center">
+            <button type="button" class="bg-light border-danger">1st Button</button>
+            <button type="button" class="bg-success btn-sm" disabled>2nd Button</button>
+            <a href="https://www.google.com" class="btn btn-lg btn-warning">Google</a>
+        </div>
+        <div class="container align-items-center">
+            <ul class="list group">
+                <li class="list-group-item">First element</li>
+                <li class="list-group-item">Second element</li>
+                <li class="list-group-item">Third element</li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Action
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://www.google.com">A link to google</a></li>
+              <li><a class="dropdown-item" href="https://www.google.com">Another link to google</a></li>
+              <li><a class="dropdown-item" href="https://www.google.com">Link to google ?</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://www.google.com">Yup.. another one</a></li>
+            </ul>
+          </div>
+          <nav class="nav nav-tabs">
+            <a href="https://www.google.com" class="nav-link">First Link</a>
+            <a href="https://www.google.com" class="nav-link">Second Link</a>
+          </nav>
+
+          <div id="imgCaro" class="carousel container p-5 slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block" src="https://cdn.pixabay.com/photo/2022/07/07/11/15/rainbow-7307023__340.png" alt="pinkpower">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="https://cdn.pixabay.com/photo/2022/03/30/13/16/betta-7101167__340.jpg" alt="koifish">
+                </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <div class="col-sm bg-success">This is one</div>
+                <div class="col-sm bg-danger">This is one</div>
+                <div class="col-sm bg-dark text-white">This is one</div>
+                <div class="col-sm bg-primary">This is one</div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+        <div class="toast-container position-fixed p-3">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">TOAST NOTIFICATION</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-success">
+              The new toast notification!
+            </div>
+          </div>
+        </div>
+  
+        <figure class="figure">
+            <img src="https://cdn.pixabay.com/photo/2022/03/30/13/16/betta-7101167__340.jpg" class="figure-img img-fluid img-thumbnail" alt="Betta">
+            <figcaption class="figure-caption">A caption for the above image.</figcaption>
+        </figure>
+
+        <script src="C:\Bootstrap\js\bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
