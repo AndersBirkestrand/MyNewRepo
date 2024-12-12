@@ -1,0 +1,4 @@
+I want the following css styling on the tables.
+Table. borcer colour #212529. Border corners: rounded. Border Thickness: thin lines.
+Table Header. Font:Consolas. Background colour: #0E8EA8. Font colour: #fff
+Table Cell. Font: Calibri. Background colour: #83D1E1. Font colour: #212529
